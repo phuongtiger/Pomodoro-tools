@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Pomodoro</title>
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <div class="setting">
+
+        <div class="box-close">
+            <img src="./assets/Icon/remove-black-sm.png" alt="close setting" onclick="closeSetting()">
+        </div>
+        <div class="form-time">
+            <label for="inputStudyNumber">Study Time:</label>
+            <input type="number" id="inputStudyNumber" value="25">
+            <br>
+            <label for="inputBreakNumber">Break Time:</label>
+            <input type="number" id="inputBreakNumber" value="5">
+            <br>
+        </div>
+        <div class="box-apply">
+            <button id="apply" onclick="setTimer()">Apply</button>
+        </div>
+    </div>
+
+    <div class="display-focus background-focus">
+        <div class="button-setting">
+            <img src="./assets/Icon/config-white.png" alt="setting icon" onclick="openSetting()">
+        </div>
+        <div id="countdown">25:00</div>
+        <div class="box-button">
+            <button id="start" onclick="startCountdown()">START</button>
+            <button onclick="stopCountdown()">STOP</button>
+        </div>
+    </div>
+    <script src="./assets/app.js"></script>
+</body>
+
+</html>
