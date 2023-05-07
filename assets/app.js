@@ -19,7 +19,7 @@ function startCountdown(currentminutes, currentseconds, checkcurrentTime) {
     var countseconds;
     if (typeof currentminutes === 'undefined') {
         countminutes = inputStudyNumber - 1;
-        countseconds = 3;
+        countseconds = 60;
     } else {
         countminutes = currentminutes;
         countseconds = currentseconds;
@@ -66,7 +66,7 @@ function startCountdown(currentminutes, currentseconds, checkcurrentTime) {
                     checkStartClick = true;
                     countdown.innerHTML = "Focus Time";
                 }
-                countseconds = 3;
+                countseconds = 60;
             }
         }, 1000);
     }
