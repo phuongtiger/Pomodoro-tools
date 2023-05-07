@@ -3,7 +3,15 @@ let checkStartClick = true;
 let checkTime;
 let display_focus = document.querySelector(".display-focus");
 let alarm_ring = new Audio("./assets/sounds/alarm.wav");
+const volumeSlider = document.getElementById('volumeSlider');
+
+volumeSlider.addEventListener('input', () => {
+  alarm_ring.volume = volumeSlider.value;
+  alarm_ring.play();
+});
+
 function startCountdown(currentminutes, currentseconds, checkcurrentTime) {
+    alarm_ring.pause();
     var inputStudyNumber = document.getElementById("inputStudyNumber").value;
     var inputBreakNumber = document.getElementById("inputBreakNumber").value;
     var start_click = new Audio("./assets/sounds/start-click.wav");
@@ -50,6 +58,7 @@ function startCountdown(currentminutes, currentseconds, checkcurrentTime) {
             if (countseconds === 0) {
                 countminutes--;
                 if (countminutes === -1 && checkTime) {
+                    alarm_ring.currentTime = 0;
                     alarm_ring.play();
                     setDisplay(false);
                     checkTime = false;
@@ -58,6 +67,7 @@ function startCountdown(currentminutes, currentseconds, checkcurrentTime) {
                     checkStartClick = true;
                     countdown.innerHTML = "Break Time";
                 } else if (countminutes === -1 && !checkTime) {
+                    alarm_ring.currentTime = 0;
                     alarm_ring.play();
                     setDisplay(true);
                     checkTime = true;
@@ -85,6 +95,7 @@ function stopCountdown() {
     stop_click.play();
     clearInterval(countdownInterval);
     countdownInterval = null;
+    alarm_ring.pause();
 }
 function openSetting() {
     document.getElementById("overlay").style.display = "block";
@@ -93,6 +104,7 @@ function openSetting() {
 function closeSetting() {
     document.getElementById("overlay").style.display = "none";
     document.querySelector(".setting").style.display = "none";
+    alarm_ring.pause();
 }
 function setTimer() {
     var countdown = document.getElementById("countdown");

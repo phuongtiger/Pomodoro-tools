@@ -112,6 +112,9 @@ button:active {
     padding-left: 50px;
     padding-top: 50px;
 }
+.setting .volume{
+    padding-left: 50px;
+}
 .box-apply{
     justify-content: center;
     display: flex;
