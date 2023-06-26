@@ -8,6 +8,16 @@
         margin-left: 20%;
     }
 }
+@media (max-width: 700px) {
+    .box-button {
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .setting{
+        margin-left: 20%;
+    }
+}
 
 @media (max-width: 500px) {
     #countdown{
