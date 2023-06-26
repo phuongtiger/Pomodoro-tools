@@ -31,6 +31,12 @@
         width: 100%;
         margin-left: 0;
     }
+    button{
+        padding: 15px 0;
+    }
+    .box-apply #apply{
+        padding: 15px 70px;
+    }
 }
 @media (max-width: 300px) {
     .setting{
