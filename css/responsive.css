@@ -1,0 +1,34 @@
+@media (max-width: 700px) {
+    .box-button {
+        flex-direction: column;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .setting{
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 500px) {
+    #countdown{
+        font-size: 90px;
+    }
+    .display-focus{
+        width: 92%;
+        margin-left: 4%;
+    }
+    .setting{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+@media (max-width: 300px) {
+    .setting{
+        width: 100%;
+        margin-left: 0;
+    }
+    .setting .form-time,
+    .setting .volume{
+        padding-left: 5%;
+    }
+}
